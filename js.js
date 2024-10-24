@@ -13,7 +13,7 @@ function sendEmail(event) {
         message: form.message.value,
     };
 
-    emailjs.send('service_bztndao', 'template_0qv83tk', data)
+    emailjs.send('service_rvxj1bq', 'template_ddptx8k', data)
         .then(() => {
             alert('Your message has been sent successfully!');
             form.reset();
