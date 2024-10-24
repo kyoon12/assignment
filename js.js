@@ -1,23 +1,17 @@
-(function() {
-    emailjs.init("service_bztndao"); 
+(function(){
+    emailjs.init("IliSXVEVYtXPJz-vP");
 })();
 
-function sendEmail(event) {
-    event.preventDefault();
 
-    const form = document.getElementById('contact-form');
-    const data = {
-        name: form.name.value,
-        email: form.email.value,
-        subject: form.subject.value,
-        message: form.message.value,
-    };
-
-    emailjs.send('service_rvxj1bq', 'template_ddptx8k', data)
-        .then(() => {
-            alert('Your message has been sent successfully!');
-            form.reset();
-        }, (error) => {
-            alert('Failed to send your message. Please try again later.');
-        });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_1iis658', 'template_0qv83tk', this)
+            .then(function() {
+                alert('Thank you for sending me a message.');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                alert('Failed to send the message: ' + JSON.stringify(error));
+            });
+    });
+});
