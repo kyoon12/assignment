@@ -1,0 +1,27 @@
+.hero {
+    background-image: url('https://thumbs.dreamstime.com/b/world-computer-network-technology-technology-communication-world-computer-network-technology-technology-communication-screen-151668581.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    color: white; /* Text color */
+    padding: 100px 0; /* Extra padding for the hero section */
+    position: relative; /* For positioning child elements */
+}
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+}
+.footer-bg {
+    background-color: #007bff; /* Blue footer background */
+    color: white; /* White text for contrast */
+    padding: 20px 0; /* Vertical padding */
+}
+.button-container {
+    position: absolute;
+    top: 70%; /* Adjust this value to position vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+}
